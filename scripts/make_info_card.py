@@ -5,7 +5,7 @@ from xml.sax.saxutils import escape
 OUT = Path("info-card.svg")
 STATIC = os.environ.get("STATIC") == "1"   # STATIC=1 gives a frozen frame for previews
 
-THEME = "light"            # match the portrait: "light" or "dark"
+THEME = "dark"            # match the portrait: "light" or "dark"
 W = 490                    # card width (the README shows it at this width)
 PAD = 22
 LH = 17                    # line height
@@ -102,3 +102,4 @@ def build():
 if __name__ == "__main__":
     OUT.write_text(build(), encoding="utf-8")
     print(f"Saved {OUT}" + (" (static)" if STATIC else ""))
+
